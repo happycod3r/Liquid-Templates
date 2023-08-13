@@ -1,5 +1,4 @@
-# Welcome to {{ site_name }}
-{% for post in posts %}
-  ## {{ post.title }}
-  {{ post.excerpt }}
+# Welcome to {{ repo_title }}
+{% for section in sections %}
+  ## {{ section.section_header }}
 {% endfor %}
