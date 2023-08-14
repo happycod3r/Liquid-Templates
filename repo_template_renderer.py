@@ -1,6 +1,5 @@
 from liquid import Liquid
 
-
 def render_liquid_md(
     template_file_name: str,
     rendered_file_name: str,
