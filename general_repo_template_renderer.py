@@ -29,46 +29,52 @@ def render_liquid_md(
     template_file.close()
     write_rendered_content(rendered_content)
     
-render_liquid_md(   
-    template_file_name="repo_template.md",
-    rendered_file_name="rendered/TEST.md",
-    repo_title="Test",
-    repo_summary="A new test repository for liquid markdown templates",
-    repo_sections=[
+PROJECT_TITLE = "Test Template"
+RENDERED_FILE = "rendered/TEST.md"
+TEMPLATE_FILE = "general_repo_template.md"
+REPO_SUMMARY = "A new test repository for liquid markdown templates"
+SECTIONS = [
         {
             "section_header": "Table Of Contents",
-            "section_summary": "The toc section",
+            "section_summary": None,
             "section_image": None,
         },
         {
             "section_header": "About",
-            "section_summary": "The about section",
+            "section_summary": None,
             "section_image": None,
         },
         {
             "section_header": "Install",
-            "section_summary": "The install section",
+            "section_summary": None,
             "section_image": None,
         },
         {
             "section_header": "Usage",
-            "section_summary": "The usage section",
+            "section_summary": None,
             "section_image": None,
         },
         {
             "section_header": "Contributing",
-            "section_summary": "The contributing section",
+            "section_summary": None,
             "section_image": None,
         },
         {
             "section_header": "Security",
-            "section_summary": "The security section",
+            "section_summary": None,
             "section_image": None,
         },
         {
             "section_header": "Contacts",
-            "section_summary": "The contacts section",
+            "section_summary": None,
             "section_image": None,
         },
     ]
+
+render_liquid_md(   
+    template_file_name=TEMPLATE_FILE,
+    rendered_file_name=RENDERED_FILE,
+    repo_title=PROJECT_TITLE,
+    repo_summary=REPO_SUMMARY,
+    repo_sections=SECTIONS
 )

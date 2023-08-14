@@ -2,11 +2,39 @@
 {{ repo_summary }}
 {% for section in sections %}
 ## [{{ section.section_header }}](#)
+{% if section.section_header == "Table Of Contents" %}
+{% if section.section_summary != None %}
 {{ section.section_summary }}
+{% endif %}
+{% endif %}
+
+{% if section.section_header == "About" %}
+{% if section.section_summary != None %}
+{{ section.section_summary }}
+{% endif %}
+{% endif %}
+
+{% if section.section_header == "Install" %}
+{% if section.section_summary != None %}
+{{ section.section_summary }}
+{% endif %}
+{% endif %}
+
+{% if section.section_header == "Usage" %}
+{% if section.section_summary != None %}
+{{ section.section_summary }}
+{% endif %}
+{% endif %}
 
 {% if section.section_header == "Contributing" %}
+{% if section.section_summary != None %}
+{{ section.section_summary }}
+{% endif %}
 If you have any feature requests, suggestions or general questions you can reach 
 me via any of the methods listed below in the [Contacts](#contacts) section.
+
+Other than that please feel free to reach out and contribute to the project if 
+your interested.
 {% endif %}
 
 {% if section.section_header == "Security" %}
